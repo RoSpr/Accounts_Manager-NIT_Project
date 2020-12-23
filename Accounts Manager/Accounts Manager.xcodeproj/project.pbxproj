@@ -25,6 +25,7 @@
 		EE81E2202592506A00002424 /* MainViewControllerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE81E21E2592506A00002424 /* MainViewControllerTableCell.swift */; };
 		EE81E2212592506A00002424 /* MainViewControllerTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE81E21F2592506A00002424 /* MainViewControllerTableCell.xib */; };
 		EEBECC9B2593308C00AEF763 /* app-symbol.png in Resources */ = {isa = PBXBuildFile; fileRef = EEBECC9A2593308C00AEF763 /* app-symbol.png */; };
+		EEBECCA32593919000AEF763 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBECCA22593919000AEF763 /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		EE81E21E2592506A00002424 /* MainViewControllerTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTableCell.swift; sourceTree = "<group>"; };
 		EE81E21F2592506A00002424 /* MainViewControllerTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewControllerTableCell.xib; sourceTree = "<group>"; };
 		EEBECC9A2593308C00AEF763 /* app-symbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-symbol.png"; sourceTree = "<group>"; };
+		EEBECCA22593919000AEF763 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		F22B72B3CB12915B1C4063A6 /* Pods-Accounts ManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Accounts ManagerTests.release.xcconfig"; path = "Target Support Files/Pods-Accounts ManagerTests/Pods-Accounts ManagerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +158,7 @@
 				EE568CBD258FA9D900ACEA3C /* AppDelegate.swift */,
 				EE568CBF258FA9D900ACEA3C /* SceneDelegate.swift */,
 				EE568CC1258FA9D900ACEA3C /* ViewController.swift */,
+				EEBECCA22593919000AEF763 /* Models.swift */,
 				EE568CC3258FA9D900ACEA3C /* Main.storyboard */,
 				EE81E21E2592506A00002424 /* MainViewControllerTableCell.swift */,
 				EE81E21F2592506A00002424 /* MainViewControllerTableCell.xib */,
@@ -433,6 +436,7 @@
 				EE511CD225911EF300B64FF6 /* CellViewController.swift in Sources */,
 				EE568CF7258FC80100ACEA3C /* CategoryTableViewCell.swift in Sources */,
 				EE568CC2258FA9D900ACEA3C /* ViewController.swift in Sources */,
+				EEBECCA32593919000AEF763 /* Models.swift in Sources */,
 				EE568CBE258FA9D900ACEA3C /* AppDelegate.swift in Sources */,
 				EE81E2202592506A00002424 /* MainViewControllerTableCell.swift in Sources */,
 				EE568CC0258FA9D900ACEA3C /* SceneDelegate.swift in Sources */,

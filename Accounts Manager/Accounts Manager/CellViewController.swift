@@ -44,15 +44,20 @@ class CellViewController: UIViewController {
             chosenDateLabel.text = item
             
             let currentCellChanges = realm.objects(AccountChange.self).filter{ $0.cellOwner == self.cellName }
-            var changeIndex = 0
+            var changeIndex = -1
             for (index, change) in currentCellChanges.enumerated() {
                 if change.date == chosenDate {
                     changeIndex = index
                 }
             }
             
-            animateSpendingsLabel(label: self.spentLabel, with: String(currentCellChanges[changeIndex].expense) )
-            animateSpendingsLabel(label: self.gainedLabel, with: String(currentCellChanges[changeIndex].receipt) )
+            if changeIndex >= 0 {
+                animateSpendingsLabel(label: self.spentLabel, with: String(currentCellChanges[changeIndex].expense))
+                animateSpendingsLabel(label: self.gainedLabel, with: String(currentCellChanges[changeIndex].receipt))
+            } else {
+                animateSpendingsLabel(label: self.spentLabel, with: "0")
+                animateSpendingsLabel(label: self.gainedLabel, with: "0")
+            }
         }
     }
     

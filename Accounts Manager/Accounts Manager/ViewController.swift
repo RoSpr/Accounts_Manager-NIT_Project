@@ -9,19 +9,6 @@ import UIKit
 import RealmSwift
 import DropDown
 
-struct RatesExample: Codable {
-    var GBP: Double
-    var USD: Double
-    var EUR: Double
-    var CAD: Double
-    var PLN: Double
-    var UAH: Double
-    var JPY: Double
-}
-
-struct ParsedCurrencies: Codable {
-    var rates: RatesExample
-}
 
 class ViewController: UIViewController {
 
@@ -82,7 +69,6 @@ class ViewController: UIViewController {
         } else {
             if roublesTextfield.text != "" {
                 if self.roublesTextfield.text!.isNumeric {
-                //((roublesTextfield.text?.rangeOfCharacter(from: CharacterSet.decimalDigits)) != nil) {
                     let result = Double(self.roublesTextfield.text!)! / chosenCurrencyRate
                     self.countedCyrrencyLabel.text = String(format: "%.2f", result)
                 } else {
@@ -128,6 +114,7 @@ class ViewController: UIViewController {
         updateLabelsAlpha(with: 0)
         chosenCurrencyLabel.text = ""
         errorMessageLabel.text = ""
+        countedCyrrencyLabel.text = ""
         
         roublesTextfield.backgroundColor = .white
         roublesTextfield.textColor = .black
@@ -214,14 +201,5 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-    }
-}
-
-
-extension String {
-    var isNumeric: Bool {
-        guard self.count > 0 else { return false }
-        let nums: Set<Character> = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-        return Set(self).isSubset(of: nums)
     }
 }

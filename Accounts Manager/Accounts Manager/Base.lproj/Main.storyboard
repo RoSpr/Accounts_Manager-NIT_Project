@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YgY-n0-2VF">
-                                <rect key="frame" x="0.0" y="-1" width="414" height="250"/>
+                                <rect key="frame" x="0.0" y="-6" width="414" height="250"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tnC-0d-xWl">
                                         <rect key="frame" x="0.0" y="220" width="414" height="30"/>
@@ -146,7 +146,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AQU-VN-wUI">
-                                <rect key="frame" x="0.0" y="319" width="414" height="494"/>
+                                <rect key="frame" x="0.0" y="314" width="414" height="499"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MainViewControllerTableCell" id="8K5-Gg-Edv" customClass="MainViewControllerTableCell" customModule="Accounts_Manager" customModuleProvider="target">
@@ -160,7 +160,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Категория" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XV4-ML-UV3">
-                                <rect key="frame" x="20" y="261" width="96" height="24"/>
+                                <rect key="frame" x="20" y="256" width="96" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="96" id="tWr-rg-pQ5"/>
                                 </constraints>
@@ -169,7 +169,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Получено" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exw-q6-umc">
-                                <rect key="frame" x="325" y="257" width="79" height="32"/>
+                                <rect key="frame" x="325" y="252" width="79" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="79" id="jWR-qq-P6W"/>
                                 </constraints>
@@ -178,7 +178,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Потрачено" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7l9-as-FLa">
-                                <rect key="frame" x="223" y="262.5" width="87" height="21"/>
+                                <rect key="frame" x="223" y="257.5" width="87" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="87" id="Gfs-xj-WLM"/>
                                 </constraints>
@@ -187,7 +187,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZg-5u-ZKa">
-                                <rect key="frame" x="4" y="279.5" width="128" height="30"/>
+                                <rect key="frame" x="4" y="274.5" width="128" height="30"/>
                                 <state key="normal" title="Обновить данные"/>
                                 <connections>
                                     <action selector="reloadCategoriesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NiM-dX-j4X"/>
@@ -202,7 +202,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AQU-VN-wUI" secondAttribute="trailing" id="FrA-zi-RUi"/>
                             <constraint firstItem="exw-q6-umc" firstAttribute="top" secondItem="YgY-n0-2VF" secondAttribute="bottom" constant="8" symbolic="YES" id="Hx2-aJ-tCu"/>
                             <constraint firstItem="AQU-VN-wUI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Q7r-K2-6o3"/>
-                            <constraint firstItem="YgY-n0-2VF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-45" id="XyS-c4-a6p"/>
+                            <constraint firstItem="YgY-n0-2VF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-50" id="XyS-c4-a6p"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YgY-n0-2VF" secondAttribute="trailing" id="aKW-py-MgI"/>
                             <constraint firstItem="XV4-ML-UV3" firstAttribute="centerY" secondItem="exw-q6-umc" secondAttribute="centerY" id="gJq-IV-bZQ"/>
                             <constraint firstItem="lZg-5u-ZKa" firstAttribute="firstBaseline" secondItem="XV4-ML-UV3" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="i3o-vO-2TU"/>
@@ -249,7 +249,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cK3-vA-6Zt">
-                                <rect key="frame" x="0.0" y="-1" width="414" height="180"/>
+                                <rect key="frame" x="0.0" y="-6" width="414" height="180"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8o-Aw-5S8">
                                         <rect key="frame" x="0.0" y="150" width="414" height="30"/>
@@ -311,7 +311,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V8r-JL-gMH">
-                                <rect key="frame" x="0.0" y="249" width="414" height="564"/>
+                                <rect key="frame" x="0.0" y="244" width="414" height="569"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="separatorColor" white="0.45775363869863012" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -326,13 +326,13 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Список категорий" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbs-qD-WH6">
-                                <rect key="frame" x="123" y="191" width="168" height="24"/>
+                                <rect key="frame" x="123" y="186" width="168" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нажмите на категорию для деталей" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyj-8N-K0x">
-                                <rect key="frame" x="70" y="220" width="274" height="20"/>
+                                <rect key="frame" x="70" y="215" width="274" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="0.40657106160000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -349,7 +349,7 @@
                             <constraint firstItem="kbs-qD-WH6" firstAttribute="top" secondItem="cK3-vA-6Zt" secondAttribute="bottom" constant="12" id="JxS-Q5-LNk"/>
                             <constraint firstItem="lPp-n6-GUC" firstAttribute="trailing" secondItem="V8r-JL-gMH" secondAttribute="trailing" id="OXd-aQ-set"/>
                             <constraint firstItem="eyj-8N-K0x" firstAttribute="top" secondItem="kbs-qD-WH6" secondAttribute="bottom" constant="5" id="XFD-ym-LqM"/>
-                            <constraint firstItem="cK3-vA-6Zt" firstAttribute="top" secondItem="lPp-n6-GUC" secondAttribute="top" constant="-45" id="k4I-JE-PqF"/>
+                            <constraint firstItem="cK3-vA-6Zt" firstAttribute="top" secondItem="lPp-n6-GUC" secondAttribute="top" constant="-50" id="k4I-JE-PqF"/>
                             <constraint firstItem="lPp-n6-GUC" firstAttribute="bottom" secondItem="V8r-JL-gMH" secondAttribute="bottom" id="y31-Gq-jMl"/>
                             <constraint firstItem="V8r-JL-gMH" firstAttribute="top" secondItem="cK3-vA-6Zt" secondAttribute="bottom" constant="70" id="zE1-l4-e3C"/>
                         </constraints>
