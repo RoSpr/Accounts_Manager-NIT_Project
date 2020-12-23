@@ -26,14 +26,6 @@ class CategoryTableViewCell: UITableViewCell {
         delegate?.cellDeleted(at: cellIndex, with: categoryNameLabel.text ?? "")
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     
     func setLabelWidth(labelWidth: CGFloat) {
         categoryNameLabelWidthConstraint.constant = labelWidth

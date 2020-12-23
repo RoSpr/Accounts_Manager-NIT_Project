@@ -40,7 +40,8 @@ class SettingsViewController: UIViewController{
         }
     }
     
-    
+    //MARK: - Кнопка для добавления категории и записи их в Realm
+    //MARK: - Также реагирует на успешное/неуспешное добавление категории показом соответствующих сообщений в лейбле
     @IBAction func addCategoryButton(_ sender: Any) {
         var categoryNamesArray: [String] = []
         for category in categories {
@@ -74,6 +75,7 @@ class SettingsViewController: UIViewController{
         }
     }
     
+    //MARK: - Функция для анимирования лейбла
     func animateCategoryAddedLabel(with text: String) {
         UIView.animate(withDuration: 1.5, delay: 0, options: .autoreverse, animations: {
             self.categoryAddedLabel.text = text
@@ -83,6 +85,7 @@ class SettingsViewController: UIViewController{
         })
     }
     
+    //MARK: - Обработчик нажатий пользователя. Скрывает/раскрывает зелёную вью с возможностью добавления категорий, расположенную вверху экрана
     @IBAction func unrollCategoryAddingByTapRecognizer(_ sender: Any) {
         if categoryViewIsHidden {
             UIView.animate(withDuration: 1, delay: 0.1, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: UIView.AnimationOptions(), animations: {
@@ -107,6 +110,7 @@ class SettingsViewController: UIViewController{
         }
     }
     
+    //MARK: - Получение категорий из Realm, обновление таблицы с ними, если они есть, и сокрытие некоторых лейблов на вью с добавлением категорий, а также её сворачивание
     override func viewDidLoad() {
         super.viewDidLoad()
         let storedCategories = realm.objects(CategoryExample.self)
@@ -161,6 +165,7 @@ extension SettingsViewController: UITableViewDelegate {
 }
 
 
+//MARK: - Делегат строки таблицы для обработки её удаления как из таблицы, так и из Realm
 extension SettingsViewController: DeletingCellDelegate {
     func cellDeleted(at index: Int, with name: String) {
         categories.remove(at: index)

@@ -36,12 +36,15 @@ class ViewController: UIViewController {
         }
     }
     
+    //MARK: - Выпадающий список из одноимённого фрэймворка
     let dropDown = DropDown()
     
+    //MARK: - Модель для парсинга курса валют
     var currenciesRatesArray = RatesExample(GBP: 0, USD: 0, EUR: 0, CAD: 0, PLN: 0, UAH: 0, JPY: 0)
     let currencyExamples = ["GBP", "USD", "EUR", "CAD", "PLN", "UAH", "JPY"]
     var chosenCurrencyRate = 1.0
     
+    //MARK: - Функция показывает выпадающий список валют и записывает курс выбранной валюты в лэйбл chosenCurrencyRate
     @IBAction func showDropDownButton(_ sender: Any) {
         getCurrencies()
 
@@ -63,6 +66,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //MARK: - Подсчёт количества рублей за выбранную валюту по полученному с сайта курсу
     @IBAction func countButton(_ sender: Any) {
         if chosenCurrencyRate == 1.0 {
             animateErrorMessageLabel(with: "Выберите валюту")
@@ -80,11 +84,12 @@ class ViewController: UIViewController {
         }
     }
     
+    //MARK: - Кнопка для обновления строк таблицы
     @IBAction func reloadCategoriesButton(_ sender: Any) {
         reloadCategories()
     }
     
-    
+    //MARK: - Обработчик нажатия на вью-элемент: раскрывает зелёную вью сверху экрана с конвертером валют
     @IBAction func converterTapGestureRecognizer(_ sender: Any) {
         if converterViewIsHidden {
             UIView.animate(withDuration: 1, delay: 0.1, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: UIView.AnimationOptions(), animations: {
@@ -108,6 +113,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //MARK: - Сворачивается зелёная вью с конвертером валют, скрываются все лейблы, которые она содержит
     override func viewDidLoad() {
         super.viewDidLoad()
         converterViewHeightConstraint.constant = 65
@@ -127,6 +133,7 @@ class ViewController: UIViewController {
         reloadCategories()
     }
     
+    //MARK: - Функция обновления строк таблицы
     func reloadCategories() {
         categories = []
         let categoriesFromRealm = realm.objects(CategoryExample.self)
@@ -135,6 +142,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //MARK: - Функция парсинга актуального курса валют
     func getCurrencies() {
         guard let url = URL(string: "https://www.cbr-xml-daily.ru/latest.js") else { return }
         URLSession.shared.dataTask(with: url) { data, _, _ in
@@ -148,6 +156,7 @@ class ViewController: UIViewController {
         }.resume()
     }
     
+    //MARK: - Обновление прозрачности лэйблов на вью с конвертером и лейбов, реагирующих на действия пользователя
     func updateLabelsAlpha(with alpha: CGFloat) {
         systemLabel.alpha = alpha
         rubLabel.alpha = alpha
@@ -161,6 +170,7 @@ class ViewController: UIViewController {
         errorMessageLabel.alpha = alpha
     }
     
+    //MARK: - Функция анимации лейбла ошибок
     func animateErrorMessageLabel(with text: String) {
         UIView.animate(withDuration: 1.5, delay: 0, options: .autoreverse, animations: {
             self.errorMessageLabel.text = text
