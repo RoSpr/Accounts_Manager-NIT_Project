@@ -8,17 +8,6 @@
 import UIKit
 import RealmSwift
 
-class AccountChange: Object {
-    @objc dynamic var cellOwner: String = ""
-    @objc dynamic var date: String = ""
-    @objc dynamic var expense: Int = 0
-    @objc dynamic var receipt: Int = 0
-}
-
-class CategoryExample: Object {
-    @objc dynamic var name: String = ""
-}
-
 
 class SettingsViewController: UIViewController{
     
@@ -170,9 +159,11 @@ extension SettingsViewController: DeletingCellDelegate {
     func cellDeleted(at index: Int, with name: String) {
         categories.remove(at: index)
 
+        let dataToDelete = realm.objects(AccountChange.self).filter("cellOwner == %@", name)
         let categoryToDelete = realm.objects(CategoryExample.self).filter("name == %@", name)
         do {
             try realm.write {
+                realm.delete(dataToDelete)
                 realm.delete(categoryToDelete)
             }
         } catch let error as NSError {

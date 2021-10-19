@@ -8,6 +8,7 @@ target 'Accounts Manager' do
   # Pods for Accounts Manager
   pod 'DropDown'
   pod 'RealmSwift'
+  pod 'FSCalendar'
 
   target 'Accounts ManagerTests' do
     inherit! :search_paths

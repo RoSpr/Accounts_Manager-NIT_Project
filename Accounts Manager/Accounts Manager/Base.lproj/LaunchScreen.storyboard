@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,19 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app-symbol.png" translatesAutoresizingMaskIntoConstraints="NO" id="fWu-wb-o12">
-                                <rect key="frame" x="147" y="238" width="120" height="120"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app-symbol" highlightedImage="app-symbol" translatesAutoresizingMaskIntoConstraints="NO" id="qpS-Fb-NH1">
+                                <rect key="frame" x="87" y="178" width="240" height="240"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="fWu-wb-o12" secondAttribute="height" multiplier="1:1" id="6Zo-rJ-hmZ"/>
-                                    <constraint firstAttribute="height" constant="120" id="PxH-ea-NDH"/>
+                                    <constraint firstAttribute="width" constant="240" id="PdS-d3-NPg"/>
+                                    <constraint firstAttribute="width" secondItem="qpS-Fb-NH1" secondAttribute="height" multiplier="1:1" id="Vmh-CD-zea"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.948936522" green="0.94907277820000002" blue="0.94890671969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fWu-wb-o12" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-150" id="CYo-O2-iiS"/>
-                            <constraint firstItem="fWu-wb-o12" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="otj-AH-JYh"/>
+                            <constraint firstItem="qpS-Fb-NH1" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-150" id="W4T-EU-17h"/>
+                            <constraint firstItem="qpS-Fb-NH1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bzx-eN-Fwy"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -38,9 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="app-symbol.png" width="452" height="452"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="app-symbol" width="300" height="300"/>
     </resources>
 </document>
