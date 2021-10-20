@@ -115,6 +115,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22DDDC6A272063D4004D947B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				22B08EC0271F01EB00A1CA20 /* AccountChange.swift */,
+				22B08EC2271F027400A1CA20 /* CategoryExample.swift */,
+				22B08EC4271F02BF00A1CA20 /* RatesExample.swift */,
+				22B08EC6271F02DC00A1CA20 /* ParsedCurrencies.swift */,
+				22B08EC8271F02F100A1CA20 /* Extensions.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		51B304F410BB3B9CB5384293 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +153,7 @@
 		EE568CB1258FA9D900ACEA3C = {
 			isa = PBXGroup;
 			children = (
+				22DDDC6A272063D4004D947B /* Models */,
 				EE568CBC258FA9D900ACEA3C /* Accounts Manager */,
 				EE568CD3258FA9DE00ACEA3C /* Accounts ManagerTests */,
 				EE568CDE258FA9DE00ACEA3C /* Accounts ManagerUITests */,
@@ -166,9 +179,6 @@
 				EE568CBD258FA9D900ACEA3C /* AppDelegate.swift */,
 				EE568CBF258FA9D900ACEA3C /* SceneDelegate.swift */,
 				EE568CC1258FA9D900ACEA3C /* ViewController.swift */,
-				22B08EC8271F02F100A1CA20 /* Extensions.swift */,
-				22B08EC6271F02DC00A1CA20 /* ParsedCurrencies.swift */,
-				22B08EC4271F02BF00A1CA20 /* RatesExample.swift */,
 				EE568CC3258FA9D900ACEA3C /* Main.storyboard */,
 				EE81E21E2592506A00002424 /* MainViewControllerTableCell.swift */,
 				EE81E21F2592506A00002424 /* MainViewControllerTableCell.xib */,
@@ -176,8 +186,6 @@
 				EE568CF5258FC80100ACEA3C /* CategoryTableViewCell.swift */,
 				EE568CF6258FC80100ACEA3C /* CategoryTableViewCell.xib */,
 				EE568CF0258FBA1A00ACEA3C /* SettingsViewController.swift */,
-				22B08EC2271F027400A1CA20 /* CategoryExample.swift */,
-				22B08EC0271F01EB00A1CA20 /* AccountChange.swift */,
 				EE568CC6258FA9DD00ACEA3C /* Assets.xcassets */,
 				22B08EBE271EE38100A1CA20 /* app-symbol.png */,
 				EE568CC8258FA9DD00ACEA3C /* LaunchScreen.storyboard */,
