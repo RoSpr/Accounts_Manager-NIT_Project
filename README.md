@@ -1,29 +1,31 @@
 # Accounts_Manager-NIT_Project
-## Менеджер учёта финансов
+## Financial Accounting Manager
 
-#### Возможности приложения
-В приложении реализованы такие возможности, как:
-- добавление и удаление категорий учёта расходов/доходов;
-- добавление и удаление расходов/доходов за выбранную дату;
-- подсчёт расходов и доходов в каждой категории за всё время использования;
-- получение актуальных курсов к рублю наиболее популярных валют с сайта https://www.cbr-xml-daily.ru.
+#### App Capabilities
+The app is capable of:
+- adding and deleting categories of income and expenses;
+- adding and deleting income and expenses for the selected date;
+- summing up income and expenses in each category for the entire usage period;
+- retrieving the current ruble exchange rate for the most commonly used currencies from the https://www.cbr-xml-daily.ru website.
 
-#### Экраны
-Всего в приложении 3 экрана. **Первый**, на который попадает пользователь при запуске, отображает добавленные категории и суммарные расходы и доходы в каждой из них. По нажатию на копку "Обновить данные" категории обновляются - это необходимо в случае добавления или удаления категорий или изменения расходов/доходов. Над списком категорий находится выпадающее окно с конвертером валют, раскрывающееся по нажатию на текст "Конвертер валют". В нем пользователю предлагается выбрать валюту из выпадающего списка и ввести её количество для подсчета суммы в рублях.
+#### App screens
+The app has 3 screens. **The first one**, shown right after the user starts 
 
-**Второй экран** также содержит список добавленных категорий, каждая из которых содержит кнопку "Удалить". Над списком категорий находится выпадающее окно с добавлением категорий.
+The application has a total of three screens. **The first screen**, which the user sees upon launch, displays the added categories and the total expenses and income for each. By pressing the "Update Data" button, the categories are refreshed—this is necessary in case of adding or deleting categories or modifying expenses/income. Above the category list is a dropdown window with a currency converter, which expands when the "Currency Converter" text is clicked. In it, the user can select a currency from the dropdown list and enter the amount for converting it to rubles.
 
-При нажатии на категорию открывается **третий экран** с названием выбранной категории, где пользователь может выбрать дату и добавить расходы с доходами. Сразу после выбора даты на экране отображаются уже введённые доходы и расходы.
+**The second screen** also contains a list of added categories, each of which includes a "Delete" button. Above the list of categories is a dropdown window for adding categories.
 
-#### Дополнительные возможности
-На каждом из экранов добавлена обработка некорретконого ввода со стороны пользователя - например, в случае ввода букв в поле для количества валюты будет показано сообщение с просьбой ввести количество валюты цифрами.
+When a category is clicked, **the third screen** opens, showing the name of the selected category, where the user can choose a date and add expenses and income. Right after selecting a date, the screen displays already entered income and expenses.
 
-#### Использованные фреймворки
+#### Additional Features
+Each screen includes error handling for incorrect input — for example, if letters are entered in the currency amount field, a message will appear asking the user to input the amount in numbers.
 
-Введённые категории, выбранные даты, траты и доходы сохраняются на устройстве при помощи фреймворка RealmSwift.
-Выпадающие списки реализованы при помощи фреймворка DropDown.
-Календарь для выбора даты создан при помощи фреймфорка FSCalendar.
+#### Frameworks Used
+
+The entered categories, selected dates, expenses, and income are saved on the device using the RealmSwift framework.
+Dropdown lists are implemented using the DropDown framework.
+The calendar for date selection is created using the FSCalendar framework.
 
 ***
 
-##### Создано в рамках курса iOS App Dev Online от Napoleon IT.
+##### Created as a final project of the iOS App Dev Online course by Napoleon IT.
